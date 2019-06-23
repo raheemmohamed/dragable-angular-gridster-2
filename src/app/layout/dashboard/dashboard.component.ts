@@ -108,7 +108,7 @@ export class DashboardComponent implements OnInit  {
   }
 
   addItem() {
-    this.dashboard.push({x: 0, y: 0, cols: 3, rows: 2});
+    this.dashboard.push({x: 0, y: 0, cols: 2, rows: 2, hasContent: true, title: 'New widget'});
     console.log(this.dashboard);
   }
 
