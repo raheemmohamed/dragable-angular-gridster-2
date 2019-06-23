@@ -1,0 +1,42 @@
+
+  <button (click)="addItem()">Add grids</button>
+      <gridster [options]="options">
+          <gridster-item [item]="item" *ngFor="let item of dashboard" class=" drag-handler">
+            <div class="button-holder">
+              <div *ngIf="item.hasContent">
+              
+                <div class="drag-handler gridster-item-moving" 
+                    style="background:black; color:white; text-align:center">
+                  test
+                  <button  class="btn btn-primary remove-button" 
+                    (mousedown)="removeItem($event, item)"
+                    (touchstart)="removeItem($event, item)">
+                    X
+                  </button>
+                </div>
+                <div class="stuff" style="display:block; width:100%; height:100%;">    
+                    <!-- <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
+                    <app-donought-chart></app-donought-chart> -->
+                    <%= {{item.selector}} %>
+                  
+                  <span> Contents </span>
+                  <a href="https://www.google.com" target="_blank">Link to Google</a>
+                </div>
+              </div>
+              <!-- <div class="item-buttons" *ngIf="item.hasContent">
+                <button class="btn btn-primary">
+                  open with
+                </button>
+                <button  class="btn btn-primary remove-button" (mousedown)="removeItem($event, item)"
+                        (touchstart)="removeItem($event, item)">
+                  X
+                </button>
+              </div> -->
+              <label *ngIf="!item.hasContent">{{item.label}}</label>
+              <button class="btn btn-primary" *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)"
+                      (touchstart)="removeItem($event, item)">
+               X
+              </button>
+            </div>
+          </gridster-item>
+        </gridster>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'elkportal';
+  // tslint:disable-next-line:variable-name
+  private _opened = false;
+
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
 }
