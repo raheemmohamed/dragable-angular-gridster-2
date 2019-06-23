@@ -17,6 +17,8 @@ export class DashboardComponent implements OnInit  {
   dashboard;
   itemChanged;
   globalItemchange;
+  dynamicSelector;
+  htmlstr = `<app-` + this.dynamicSelector + `></app-` + this.dynamicSelector + `>`;
 
   ngOnInit() {
     this.customizableDashboard();
@@ -82,9 +84,9 @@ export class DashboardComponent implements OnInit  {
     this.dashboard = [
       {cols: 2, rows: 2, y: 0, x: 0,
         hasContent: true,
-        selector: '<app-barchart [(gristerChanged)]="itemChanged"></app-barchart>',
+        chartType: 'barChart',
         title: 'widget 1'},
-      {cols: 2, rows: 2, y: 0, x: 2, hasContent: true , selector: ' <app-donought-chart></app-donought-chart>',
+      {cols: 2, rows: 2, y: 0, x: 2, hasContent: true , chartType: 'lineChart',
       title: 'widget 2'},
       {cols: 1, rows: 1, y: 0, x: 4, hasContent: true, title: 'widget 3'},
       {cols: 1, rows: 1, y: 0, x: 5, hasContent: true, title: 'widget 4'},

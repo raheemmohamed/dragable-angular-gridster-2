@@ -14,11 +14,25 @@
                     X
                   </button>
                 </div>
-                <div class="stuff" style="display:block; width:100%; height:100%;">    
-                    <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
-                    <app-donought-chart></app-donought-chart>
+                <div class="stuff" style="display:block; width:100%; height:100%;">  
+                  
+                  <ng-container [ngSwitch]="item.chartType">
+                      <ng-container *ngSwitchCase="'barChart'">
+                          <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
+                      </ng-container>
+
+                      <ng-container *ngSwitchCase="'lineChart'">
+                          <app-donought-chart></app-donought-chart>
+                      </ng-container>
+
+                      <ng-container *ngSwitchDefault></ng-container>
+                  </ng-container>
+                    <!-- <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
+                    <app-donought-chart></app-donought-chart> -->
                     <!-- <%= {{item.selector}} %> -->
-                    {{item.selector}}
+                    <!-- {{item.selector}} -->
+
+                    <!-- <app- {{item.selector}} ></app- {{item.selector}}> -->
                 </div>
               </div>
  

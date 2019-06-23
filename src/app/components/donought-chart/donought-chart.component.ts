@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {Highcharts} from '../../shared/global-imports';
 
 @Component({
@@ -6,11 +6,15 @@ import {Highcharts} from '../../shared/global-imports';
   templateUrl: './donought-chart.component.html',
   styleUrls: ['./donought-chart.component.scss']
 })
-export class DonoughtChartComponent implements OnInit {
+export class DonoughtChartComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  lineChart() {
       Highcharts.chart('line', {
 
         title: {
@@ -73,6 +77,10 @@ export class DonoughtChartComponent implements OnInit {
         }
 
     });
+  }
+
+  ngAfterViewInit() {
+    this.lineChart();
   }
 
 }

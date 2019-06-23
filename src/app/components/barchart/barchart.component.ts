@@ -46,7 +46,6 @@ export class BarchartComponent implements OnInit, OnChanges, AfterViewInit {
 
   ngAfterViewInit() {
     this.chartIni();
-    console.log('changed', this.gristerChanged);
   }
 
   ngOnChanges(changes: SimpleChanges) {
