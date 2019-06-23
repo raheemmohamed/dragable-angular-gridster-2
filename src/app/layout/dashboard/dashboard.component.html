@@ -21,15 +21,7 @@
                     {{item.selector}}
                 </div>
               </div>
-              <!-- <div class="item-buttons" *ngIf="item.hasContent">
-                <button class="btn btn-primary">
-                  open with
-                </button>
-                <button  class="btn btn-primary remove-button" (mousedown)="removeItem($event, item)"
-                        (touchstart)="removeItem($event, item)">
-                  X
-                </button>
-              </div> -->
+ 
               <label *ngIf="!item.hasContent">{{item.label}}</label>
               <button class="btn btn-primary" *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)"
                       (touchstart)="removeItem($event, item)">

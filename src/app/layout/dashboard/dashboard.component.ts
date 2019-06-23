@@ -87,10 +87,9 @@ export class DashboardComponent implements OnInit  {
       {cols: 2, rows: 2, y: 0, x: 2, hasContent: true , selector: ' <app-donought-chart></app-donought-chart>',
       title: 'widget 2'},
       {cols: 1, rows: 1, y: 0, x: 4, hasContent: true, title: 'widget 3'},
-      {cols: 1, rows: 1, y: 2, x: 5, hasContent: true, title: 'widget 4'},
+      {cols: 1, rows: 1, y: 0, x: 5, hasContent: true, title: 'widget 4'},
       {cols: 1, rows: 1, y: 1, x: 0,  hasContent: true, title: 'widget 5'},
-      {cols: 1, rows: 1, y: 1, x: 0,  hasContent: true, title: 'widget 6'},
-      {cols: 1, rows: 1, y: 2, x: 6,  hasContent: true, title: 'widget 7'}
+      {cols: 1, rows: 1, y: 1, x: 0,  hasContent: true, title: 'widget 6'}
     ];
   }
 
