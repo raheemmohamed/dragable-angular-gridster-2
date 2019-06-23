@@ -4,6 +4,18 @@ const Highcharts = require('highcharts');
 // Load module after Highcharts is loaded
 require('highcharts/modules/exporting')(Highcharts);
 
+
+declare var require: any;
+const Boost = require('highcharts/modules/boost');
+const noData = require('highcharts/modules/no-data-to-display');
+const More = require('highcharts/highcharts-more');
+
+Boost(Highcharts);
+noData(Highcharts);
+More(Highcharts);
+noData(Highcharts);
+
+
 @Component({
   selector: 'app-donought-chart',
   templateUrl: './donought-chart.component.html',
