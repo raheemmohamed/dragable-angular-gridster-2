@@ -1,13 +1,13 @@
 
   <button (click)="addItem()">Add grids</button>
-      <gridster [options]="options">
+      <gridster [options]="options" id="grid-customized-scroll">
           <gridster-item [item]="item" *ngFor="let item of dashboard" class=" drag-handler">
             <div class="button-holder">
               <div *ngIf="item.hasContent">
               
                 <div class="drag-handler gridster-item-moving" 
                     style="background:black; color:white; text-align:center">
-                  test
+                  {{item.title}}
                   <button class="btn btn-primary remove-button" 
                     (mousedown)="removeItem($event, item)"
                     (touchstart)="removeItem($event, item)">

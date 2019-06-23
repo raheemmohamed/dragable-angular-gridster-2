@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit  {
       useTransformPositioning: true,
       mobileBreakpoint: 640,
       minCols: 1,
-      maxCols: 12,
+      maxCols: 6,
       minRows: 2,
       maxRows: 100,
       maxItemCols: 100,
@@ -80,13 +80,17 @@ export class DashboardComponent implements OnInit  {
     };
 
     this.dashboard = [
-      {cols: 2, rows: 2, y: 0, x: 0, hasContent: true, selector: '<app-barchart [(gristerChanged)]="itemChanged"></app-barchart>'},
-      {cols: 2, rows: 2, y: 0, x: 2, hasContent: true , selector: ' <app-donought-chart></app-donought-chart>'},
-      {cols: 1, rows: 1, y: 0, x: 4},
-      {cols: 1, rows: 1, y: 2, x: 5},
-      {cols: 1, rows: 1, y: 1, x: 0},
-      {cols: 1, rows: 1, y: 1, x: 0},
-      {cols: 1, rows: 1, y: 2, x: 6}
+      {cols: 2, rows: 2, y: 0, x: 0,
+        hasContent: true,
+        selector: '<app-barchart [(gristerChanged)]="itemChanged"></app-barchart>',
+        title: 'widget 1'},
+      {cols: 2, rows: 2, y: 0, x: 2, hasContent: true , selector: ' <app-donought-chart></app-donought-chart>',
+      title: 'widget 2'},
+      {cols: 1, rows: 1, y: 0, x: 4, hasContent: true, title: 'widget 3'},
+      {cols: 1, rows: 1, y: 2, x: 5, hasContent: true, title: 'widget 4'},
+      {cols: 1, rows: 1, y: 1, x: 0,  hasContent: true, title: 'widget 5'},
+      {cols: 1, rows: 1, y: 1, x: 0,  hasContent: true, title: 'widget 6'},
+      {cols: 1, rows: 1, y: 2, x: 6,  hasContent: true, title: 'widget 7'}
     ];
   }
 
