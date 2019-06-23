@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit  {
   customizableDashboard() {
     this.options = {
       gridType: GridType.ScrollVertical,
-      compactType: CompactType.None,
+      compactType: CompactType.CompactUp,
       margin: 10,
       outerMargin: true,
       outerMarginTop: null,

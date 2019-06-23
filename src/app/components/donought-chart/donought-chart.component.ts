@@ -3,6 +3,8 @@ const Highcharts = require('highcharts');
 
 // Load module after Highcharts is loaded
 require('highcharts/modules/exporting')(Highcharts);
+import theme from 'highcharts/themes/dark-unica';
+theme(Highcharts);
 
 
 declare var require: any;

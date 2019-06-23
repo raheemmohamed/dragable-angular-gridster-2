@@ -8,15 +8,15 @@
                 <div class="drag-handler gridster-item-moving" 
                     style="background:black; color:white; text-align:center">
                   test
-                  <button  class="btn btn-primary remove-button" 
+                  <button class="btn btn-primary remove-button" 
                     (mousedown)="removeItem($event, item)"
                     (touchstart)="removeItem($event, item)">
                     X
                   </button>
                 </div>
                 <div class="stuff" style="display:block; width:100%; height:100%;">    
-                    <!-- <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
-                    <app-donought-chart></app-donought-chart> -->
+                    <app-barchart [(gristerChanged)]='itemChanged'></app-barchart>
+                    <app-donought-chart></app-donought-chart>
                     <%= {{item.selector}} %>
                   
                   <span> Contents </span>
