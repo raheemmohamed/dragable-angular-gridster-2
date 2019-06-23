@@ -22,6 +22,7 @@ import { NgGridModule } from 'angular2-grid';
 import { DonoughtChartComponent } from './components/donought-chart/donought-chart.component';
 
 
+
 const Highcharts = require('highcharts');
 // Load module after Highcharts is loaded
 require('highcharts/modules/exporting')(Highcharts);
@@ -35,7 +36,6 @@ Boost(Highcharts);
 noData(Highcharts);
 More(Highcharts);
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +46,7 @@ More(Highcharts);
     SideNavigationComponent,
     BarchartComponent,
     GridDashboardComponent,
-    DonoughtChartComponent
+    DonoughtChartComponent,
   ],
   imports: [
     BrowserModule,

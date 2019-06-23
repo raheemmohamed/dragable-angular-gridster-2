@@ -1,22 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, AfterViewInit } from '@angular/core';
 // import * as Highcharts from 'highcharts';
-
-const Highcharts = require('highcharts');
-
-// Load module after Highcharts is loaded
-require('highcharts/modules/exporting')(Highcharts);
-import theme from 'highcharts/themes/dark-unica';
-theme(Highcharts);
-
-declare var require: any;
-const Boost = require('highcharts/modules/boost');
-const noData = require('highcharts/modules/no-data-to-display');
-const More = require('highcharts/highcharts-more');
-
-Boost(Highcharts);
-noData(Highcharts);
-More(Highcharts);
-noData(Highcharts);
+import {Highcharts} from '../../shared/global-imports';
 
 @Component({
   selector: 'app-barchart',
@@ -30,11 +14,10 @@ export class BarchartComponent implements OnInit, OnChanges, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
-
   }
 
   chartIni() {
-      Highcharts.chart('container', {
+     Highcharts.chart('container', {
           chart: {
               type: 'bar'
           },
